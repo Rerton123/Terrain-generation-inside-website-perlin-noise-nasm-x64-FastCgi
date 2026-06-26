@@ -29,7 +29,7 @@ sudo fuser -k 9000/tcp
 
 <SLIGHT EXPLANATION OF THE CODE>
 0) "work.asm" is main file
-1) it begins by initializing data
+1) it begins by initializing memory
 Loads 10mb data file into memory which contains 100k possible user slots (each 100bytes)
 Loads images into memory (6,1 mb)
 Both for fast acces
