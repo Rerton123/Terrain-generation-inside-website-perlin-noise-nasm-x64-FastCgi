@@ -5,7 +5,7 @@ download xampp(lampp) version 8.0.30  [linux]
 https://www.apachefriends.org/download.html
 (so http conf file would be easy to set up)
 
-when there is a folder, named "HTTPD FILES" and inside is
+where is a folder, named "HTTPD FILES" - inside is
 setting of httpd.conf file, to replace existing one.
 found in "/opt/lampp/etc/"
 
