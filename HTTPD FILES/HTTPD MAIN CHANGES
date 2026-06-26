@@ -1,0 +1,15 @@
+ProxyPass "/" "fcgi://127.0.0.1:9000/"
+ProxyPassReverse / fcgi://127.0.0.1:9000/
+
+<Location "/">
+    SetHandler "proxy:fcgi://127.0.0.1:9000"
+</Location>
+
+ProxyPassMatch ^/fcgi/(.*)$ fcgi://127.0.0.1:9000/
+
+AddHandler cgi-script .cgi .fcgi
+AddHandler fcgid-script .cgi .fcgi
+
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_fcgi_module modules/mod_proxy_fcgi.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
