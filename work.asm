@@ -88,10 +88,6 @@ RemCookies db "Set-Cookie: 1=; Path=/; Max-Age=0",13,10,\
 "Set-Cookie: 4=; Path=/; Max-Age=0",13,10,13,10
 RemCookiesL equ $ - RemCookies
 
-code:
-    incbin "test.js"
-code_end:
-code_len equ code_end - code
 
 UnShort:
     db "<script>"
@@ -569,15 +565,15 @@ main:
             jmp .P_end
 
         .GiveWasm:
-            print WASM_answer,WASM_answerL,[req + 16]
+            ; print WASM_answer,WASM_answerL,[req + 16]
 
 
-            print WasmCode,WasmCodeL, [req + 16]
-            mov rdx,WASM_answerL; string lenght
-            mov rsi,WASM_answer; string
-            mov rax,1
-            mov rdi,1
-            syscall
+            ; print WasmCode,WasmCodeL, [req + 16]
+            ; mov rdx,WASM_answerL; string lenght
+            ; mov rsi,WASM_answer; string
+            ; mov rax,1
+            ; mov rdi,1
+            ; syscall
 
             jmp .P_end
         .Give2NDlayer:
