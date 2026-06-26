@@ -39,4 +39,4 @@ Both for fast acces
 If user has both, it when checks by the token, which is hash and logins each time
 If user registers/ new login it when hashes username into unique string in range of 100k variants
 If none of these when it just prcceds to go to login screen
-5) will finish tommorow.
+5) will finish explaining tommorow.
