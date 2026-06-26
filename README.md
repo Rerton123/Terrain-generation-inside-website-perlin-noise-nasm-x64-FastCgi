@@ -5,7 +5,7 @@ download xampp(lampp) version 8.0.30  [linux]
 https://www.apachefriends.org/download.html
 (so http conf file would be easy to set up)
 
-when there is a folder, named "HTTPD FILE" and inside is
+when there is a folder, named "HTTPD FILES" and inside is
 setting of httpd.conf file, to replace existing one.
 found in "/opt/lampp/etc/"
 
@@ -35,4 +35,8 @@ Loads images into memory (6,1 mb)
 Both for fast acces
 2) when it begins main loop
 3) waits for new request
-4) when receaves
+4) when receaves request it when checks if user has cookies, "token" and "pass"
+If user has both, it when checks by the token, which is hash and logins each time
+If user registers/ new login it when hashes username into unique string in range of 100k variants
+If none of these when it just prcceds to go to login screen
+5) will finish tommorow.
